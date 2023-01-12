@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    environment: universe
 
     steps:
       - name: Checkout repository
@@ -22,15 +24,25 @@ jobs:
           deno-version: v1.x
 
       - name: Run script
-        run: deno run -A ./mod.ts photo
+        run: deno run -A ./mod.ts
         env:
           TOKEN: ${{ secrets.TOKEN }}
           
-#    - name: Add generated files
-#      run: git add .
+          
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4.2.3
+        with:
+          token: ${{ secrets.PAT }}
+          commit-message: Backup update report
+          committer: tg <tg@wjsn.org>
+          author: tg <tg@wjsn.org>
+          signoff: false
+          branch: backup-patches
+          delete-branch: true
+          title: '[Backup] Update report'
+          body: |
+            backup by Github actions.
+          labels: |
+            backup
+            automated pr
 
-#    - name: Commit changes
-#      run: git commit -m 'Automated commit of generated files'
-
-#    - name: Push changes
-#      run: git push
