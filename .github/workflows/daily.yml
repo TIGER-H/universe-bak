@@ -24,15 +24,15 @@ jobs:
           deno-version: v1.x
 
       - name: Run script
-        run: deno run -A ./mod.ts photo
+        run: deno run -A ./mod.ts
         env:
           TOKEN: ${{ secrets.TOKEN }}
           
-#    - name: Add generated files
-#      run: git add .
+      - name: Add generated files
+        run: git add .
 
-#    - name: Commit changes
-#      run: git commit -m 'Automated commit of generated files'
+      - name: Commit changes
+        run: git commit -m 'Automated backup'
 
-#    - name: Push changes
-#      run: git push
+      - name: Push changes
+        run: git push
