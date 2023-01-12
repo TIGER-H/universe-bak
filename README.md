@@ -16,4 +16,4 @@ backup for WJSN universe, metadata for now
 
 ## fns
 
-- [ ] by member
+- [x] by member
