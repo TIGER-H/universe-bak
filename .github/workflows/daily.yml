@@ -24,7 +24,7 @@ jobs:
       - name: Run script
         run: deno run -A ./mod.ts photo
         env:
-          token: ${{ secrets.TOKEN }}
+          TOKEN: ${{ secrets.TOKEN }}
           
 #    - name: Add generated files
 #      run: git add .
