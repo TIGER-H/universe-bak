@@ -33,13 +33,13 @@ jobs:
         uses: peter-evans/create-pull-request@v4.2.3
         with:
           token: ${{ secrets.PAT }}
-          commit-message: Backup update report
+          commit-message: Backup update
           committer: tg <tg@wjsn.org>
           author: tg <tg@wjsn.org>
           signoff: false
           branch: backup-patches
           delete-branch: true
-          title: '[Backup] Update report'
+          title: '[Backup] Update'
           body: |
             backup by Github actions.
           labels: |
