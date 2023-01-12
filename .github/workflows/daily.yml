@@ -28,14 +28,21 @@ jobs:
         env:
           TOKEN: ${{ secrets.TOKEN }}
           
-      - name: Add generated files
-        run: |
-          git add .
-          git config --global user.email "tg@wjsn.org"
-          git config --global user.name "tg"
+          
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4.2.3
+        with:
+          token: ${{ secrets.PAT }}
+          commit-message: Backup update report
+          committer: tg <tg@wjsn.org>
+          author: tg <tg@wjsn.org>
+          signoff: false
+          branch: backup-patches
+          delete-branch: true
+          title: '[Backup] Update report'
+          body: |
+            backup by Github actions.
+          labels: |
+            backup
+            automated pr
 
-      - name: Commit changes
-        run: git commit -m 'Automated backup'
-
-      - name: Push changes
-        run: git push
