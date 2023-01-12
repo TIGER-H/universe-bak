@@ -16,7 +16,12 @@ jobs:
     - name: Install Deno
       run: curl -fsSL https://deno.land/x/install/install.sh | sh
       
-    - name: deno output test
+    - name: Add Deno to path
+      run: |
+        export DENO_INSTALL="/home/runner/.deno"
+        export PATH="$DENO_INSTALL/bin:$PATH"  
+
+    - name: Deno output test
       run: deno --version
 
 #    - name: Run script
