@@ -1,0 +1,31 @@
+name: Daily script
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3.3.0
+      
+    - name: Install Deno
+      run: curl -fsSL https://deno.land/x/install/install.sh | sh
+      
+    - name: deno output test
+      run: deno --version
+
+#    - name: Run script
+#     run: bash script.sh
+
+#    - name: Add generated files
+#      run: git add .
+
+#    - name: Commit changes
+#      run: git commit -m 'Automated commit of generated files'
+
+#    - name: Push changes
+#      run: git push
