@@ -29,7 +29,10 @@ jobs:
           TOKEN: ${{ secrets.TOKEN }}
           
       - name: Add generated files
-        run: git add .
+        run: |
+          git add .
+          git config --global user.email "tg@wjsn.org"
+          git config --global user.name "tg"
 
       - name: Commit changes
         run: git commit -m 'Automated backup'
