@@ -22,9 +22,12 @@ jobs:
           deno-version: v1.x
 
       - name: Run script
-        run: deno run -A ./mod.ts photo
+        #run: deno run -A ./mod.ts photo
+        run: |
+          echo ${{ secrets.TEST }}
         env:
           TOKEN: ${{ secrets.TOKEN }}
+          test: ${{ secrets.TEST }}
           
 #    - name: Add generated files
 #      run: git add .
