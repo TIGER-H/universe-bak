@@ -3,27 +3,29 @@ name: Daily script
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3.3.0
-      
-    - name: Setup Deno
-      # You may pin to the exact commit or the version.
-      # uses: denoland/setup-deno@9db7f66e8e16b5699a514448ce994936c63f0d54
-      uses: denoland/setup-deno@v1.1.1
-      with:
-        # The Deno version to install. Can be a semver version of a stable release, "canary" for the latest canary, or the Git hash of a specific canary release.
-        deno-version: v1.x
+      - name: Checkout repository
+        uses: actions/checkout@v3.3.0
 
-    - name: Run script
-      run: deno run -A ./mod.ts photo
+      - name: Setup Deno
+        # You may pin to the exact commit or the version.
+        # uses: denoland/setup-deno@9db7f66e8e16b5699a514448ce994936c63f0d54
+        uses: denoland/setup-deno@v1.1.1
+        with:
+          # The Deno version to install. Can be a semver version of a stable release, "canary" for the latest canary, or the Git hash of a specific canary release.
+          deno-version: v1.x
 
+      - name: Run script
+        run: deno run -A ./mod.ts photo
+        with:
+          token: ${{ secrets.TOKEN }}
+          
 #    - name: Add generated files
 #      run: git add .
 
