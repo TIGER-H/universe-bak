@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    environment: universe
 
     steps:
       - name: Checkout repository
@@ -22,12 +24,9 @@ jobs:
           deno-version: v1.x
 
       - name: Run script
-        #run: deno run -A ./mod.ts photo
-        run: |
-          echo ${{ secrets.TEST }}
+        run: deno run -A ./mod.ts photo
         env:
           TOKEN: ${{ secrets.TOKEN }}
-          test: ${{ secrets.TEST }}
           
 #    - name: Add generated files
 #      run: git add .
