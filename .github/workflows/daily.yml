@@ -12,13 +12,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3.3.0
-
-      - name: Github Action for rclone
-        uses: wei/rclone@v1.1.1 
-        env:
-          RCLONE_CONF: ${{ secrets.RCLONE }}
+        
+      - name: Setup Rclone
+        uses: AnimMouse/setup-rclone@v1
         with:
-          args: copy <source>:<source_path> <dest>:<dest_path>  
+          rclone_config: ${{ secrets.RCLONE }}
+          token: ${{ secrets.PAT }}
 
-      - name: test rclone
-        run: rclone copy ./README.md 316:/
+      - run: rclone copy ./README.md 316:/
