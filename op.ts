@@ -16,7 +16,8 @@ export const originalUrls = generateUrl(baseUrls.ORIGINAL, originalType, "type")
  */
 export const fnsUrls = generateUrl(baseUrls.FNS, artistUserId, "artistUserIds");
 
-export const backup = async (metaType: "FNS" | "PHOTO" | "ORIGINAL", params: [string, URL]) => {
+type MetaType = "FNS" | "PHOTO" | "ORIGINAL";
+const _backup = async (metaType: MetaType, params: [string, URL]) => {
   const [name, url] = params;
   console.log("backup", `[${metaType}]:`, name);
 
@@ -89,26 +90,20 @@ export const backup = async (metaType: "FNS" | "PHOTO" | "ORIGINAL", params: [st
         break;
       }
   }
-  Deno.writeFileSync('./log.txt', textEncoder.encode(`[${metaType}]\t[${name}]\t[${cnt}]\t${new Date().toISOString()}\n`), {
+  Deno.writeFileSync('./log.md', textEncoder.encode(`|[${metaType}]|[${name}]|[${cnt}]|${new Date().toISOString()}|\n`), {
     append: true,
   });
   console.log("DONE", `[${metaType}]: `, name, cnt);
 };
 
-export const backupFns = async () => {
-  for (const [name, url] of Object.entries(fnsUrls)) {
-    await backup("FNS", [name, url]);
+const backup = (metaType: MetaType, urlObject: {
+  [key: string]: URL;
+}) => async () => {
+  for (const [name, url] of Object.entries(urlObject)) {
+    await _backup(metaType, [name, url]);
   }
 };
 
-export const backupPhotos = async () => {
-  for (const [name, url] of Object.entries(photoUrls)) {
-    await backup("PHOTO", [name, url]);
-  }
-};
-
-export const backupOriginals = async () => {
-  for (const [name, url] of Object.entries(originalUrls)) {
-    await backup("ORIGINAL", [name, url]);
-  }
-};
+export const backupFns = backup("FNS", fnsUrls);
+export const backupPhotos = backup("PHOTO", photoUrls);
+export const backupOriginals = backup("ORIGINAL", originalUrls);
