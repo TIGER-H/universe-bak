@@ -13,7 +13,7 @@ export const backupDetailOriginals = async () => {
     console.log("got", contentsList.length, "contents");
 
     Deno.writeFileSync(
-      "./original/contents/" + original.seriesId + ".json",
+      `./original/contents/[${original.seriesId}]${original.title}.json`,
       new TextEncoder().encode(JSON.stringify(contentsList, null, 2)),
     );
   }

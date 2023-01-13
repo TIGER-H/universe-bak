@@ -1,0 +1,32 @@
+[
+  {
+    "contentsId": 17928,
+    "planetId": 4,
+    "seriesId": 11792,
+    "thumbnailPath": "https://d2nmfrc2pe2bsk.cloudfront.net/2022/08/18/t_94rfdw88bKife3mc3PPmfW.jpg?type=w100",
+    "priority": 0,
+    "createdAt": "2022-08-18T06:21:49.421Z",
+    "updatedAt": "2022-08-18T06:21:49.421Z",
+    "paid": false
+  },
+  {
+    "contentsId": 17929,
+    "planetId": 4,
+    "seriesId": 11792,
+    "thumbnailPath": "https://d2nmfrc2pe2bsk.cloudfront.net/2022/08/18/t_rkQmnGxLJVlsFxtNl22gKD.jpg?type=w100",
+    "priority": 1,
+    "createdAt": "2022-08-18T06:21:49.423Z",
+    "updatedAt": "2022-08-18T06:21:49.423Z",
+    "paid": false
+  },
+  {
+    "contentsId": 17930,
+    "planetId": 4,
+    "seriesId": 11792,
+    "thumbnailPath": "https://d2nmfrc2pe2bsk.cloudfront.net/2022/08/18/t_egvYFmAftUGf9cphE7blAf.jpg?type=w100",
+    "priority": 2,
+    "createdAt": "2022-08-18T06:21:49.428Z",
+    "updatedAt": "2022-08-18T06:21:49.428Z",
+    "paid": false
+  }
+]

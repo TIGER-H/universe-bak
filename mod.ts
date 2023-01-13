@@ -1,5 +1,6 @@
 import { backupFns, backupOriginals, backupPhotos } from "./op.ts";
 import { backupDetailOriginals } from "./original/original.ts";
+import { backupDetailPhotos } from "./photos/photo.ts";
 
 Deno.removeSync("./log.md");
 const [opt] = Deno.args;
@@ -40,3 +41,4 @@ Deno.writeFileSync(
 );
 
 await backupDetailOriginals();
+await backupDetailPhotos();
