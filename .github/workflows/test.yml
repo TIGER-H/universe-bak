@@ -1,0 +1,25 @@
+name: Daily script
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    environment: universe
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.3.0
+
+      - name: Github Action for rclone
+        uses: wei/rclone@v1.1.1 
+        env:
+          RCLONE_CONF: ${{ secrets.RCLONE }}
+        with:
+          args: copy <source>:<source_path> <dest>:<dest_path>  
+          
+      - name: test rclone
+        run: rclone copy ./README.md 316:/
+          
