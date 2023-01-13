@@ -4,7 +4,8 @@ const token = Deno.env.get("TOKEN");
 if (!token) {
   throw new Error("TOKEN not found");
 }
-export const headers = new Headers({
+
+const headers = new Headers({
   Host: "api.nc-universe.io",
   "Content-Type": "application/json",
   Accept: "*/*",
@@ -16,21 +17,36 @@ export const headers = new Headers({
 });
 
 export const baseUrls = {
-  PHOTO: "https://api.nc-universe.io/planet/v1/planets/4/media/photos",
-  ORIGINAL: "https://api.nc-universe.io/planet/v1/planets/4/media/originals",
-  FNS: "https://api.nc-universe.io/board/v1/planets/4/artist-board/posts",
+  PHOTO: new URL("https://api.nc-universe.io/planet/v1/planets/4/media/photos"),
+  ORIGINAL: new URL(
+    "https://api.nc-universe.io/planet/v1/planets/4/media/originals",
+  ),
+  FNS: new URL(
+    "https://api.nc-universe.io/board/v1/planets/4/artist-board/posts",
+  ),
+};
+
+export const fetcher = async (url: URL) => {
+  const resp = await fetch(
+    url,
+    {
+      method: "GET",
+      headers,
+    },
+  );
+  return await resp.json();
 };
 
 export const photoCategoryId = {
   ALL: 0,
   ORIGINAL: 7,
-  BEHIND: 8
+  BEHIND: 8,
 };
 
 export const originalType = {
   ALL: "",
   AUDIO: "AUDIO",
-  VOD: "VOD"
+  VOD: "VOD",
 };
 
 export const WJSN = [
@@ -56,10 +72,14 @@ export const artistUserId = {
   EUNSEO: "5463839564935826332",
   YEOREUM: "7077585596836504415",
   DAYOUNG: "6035978306678903507",
-  YEONJUNG: "5926199399463284549"
+  YEONJUNG: "5926199399463284549",
 };
 
-export const generateUrl = (base: string, o: { [k in string]: string | number }, param: string) => {
+export const generateUrl = (
+  base: URL,
+  o: { [k in string]: string | number },
+  param: string,
+) => {
   const urls = {};
   for (const [key, value] of Object.entries(o)) {
     const url = new URL(base);
