@@ -18,15 +18,3 @@ export const backupDetailOriginals = async () => {
     );
   }
 };
-
-// const generateDlink = () => {
-//   const dir = Deno.readDirSync('./original/contents');
-//   for (const file of dir) {
-//     const contents = JSON.parse(Deno.readTextFileSync('./original/contents/' + file.name));
-//     //@ts-ignore any
-//     const dlink = contents.map(content => content.path);
-//     Deno.writeFileSync('./original/dlink/' + file.name.split(".")[0] + ".txt", new TextEncoder().encode(dlink.join("\n")));
-//   }
-// };
-
-// generateDlink();
