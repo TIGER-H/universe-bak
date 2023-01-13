@@ -30,5 +30,6 @@ switch (opt) {
 const txt = Deno.readTextFileSync('./log.md');
 
 const markdownHeader = `| Type | Name | Count | UpdateDate |\n| ---- | ---- | ----- | ---- |\n`;
-Deno.writeFileSync('./log.md', new TextEncoder().encode(markdownHeader + txt), { append: false })
+const sorted = txt.split("\n").filter(str => str !== "").sort();
+Deno.writeFileSync('./log.md', new TextEncoder().encode(markdownHeader + sorted.join('\n')), { append: false })
 
