@@ -1,14 +1,18 @@
 # universe-bak
 
-backup for WJSN universe, metadata for now
+WJSN universe backup
 
 ## original
 
 - [ ] video series
 
-- [ ] audio series
+> drm videos not rdy
+
+- [x] audio series
 
 ## UNIVERSE photo
+
+> hi res photo not recorded yet (need money)
 
 - [x] original
 
