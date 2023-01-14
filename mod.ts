@@ -2,11 +2,21 @@ import { backupFns, backupOriginals, backupPhotos } from "./op.ts";
 import { backupDetailOriginals } from "./original/original.ts";
 import { backupDetailPhotos } from "./photos/photo.ts";
 
-Deno.removeSync("./log.md");
 const [opt] = Deno.args;
+if (opt !== "nometa") {
+  Deno.removeSync("./log.md");
+}
+
+/**
+ * meta: artist-board & media(original+photo) meta
+ * nometa: detailed original
+ */
 
 switch (opt) {
-  case "debug": {
+  case "nometa": {
+    await backupDetailOriginals();
+    await backupDetailPhotos();
+    Deno.exit();
     break;
   }
   case "fns": {
@@ -22,6 +32,7 @@ switch (opt) {
     await backupOriginals();
     break;
   }
+  case "all":
   default:
     await Promise.all([backupFns(), backupPhotos(), backupOriginals()]);
 }
@@ -39,6 +50,3 @@ Deno.writeFileSync(
   new TextEncoder().encode(markdownHeader + sorted.join("\n")),
   { append: false },
 );
-
-await backupDetailOriginals();
-await backupDetailPhotos();
