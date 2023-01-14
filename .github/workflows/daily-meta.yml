@@ -1,4 +1,4 @@
-name: Daily script
+name: Daily meta backup script
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     environment: universe
 
     steps:
@@ -27,8 +27,7 @@ jobs:
         run: deno run -A ./mod.ts
         env:
           TOKEN: ${{ secrets.TOKEN }}
-          
-          
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4.2.3
         with:
@@ -37,12 +36,11 @@ jobs:
           committer: tg <tg@wjsn.org>
           author: tg <tg@wjsn.org>
           signoff: false
-          branch: backup-patches
+          branch: backup-meta-patches
           delete-branch: true
-          title: '[Backup] Update'
+          title: "[Backup] Metadata Update"
           body: |
-            backup by Github actions.
+            meta backup by Github actions.
           labels: |
             backup
             automated pr
-

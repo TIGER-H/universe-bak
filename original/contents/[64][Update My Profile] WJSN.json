@@ -1,0 +1,80 @@
+[
+  {
+    "contentsId": 2791,
+    "planetId": 4,
+    "seriesId": 64,
+    "mediaType": "VOD",
+    "contentsType": "ENTERTAINMENT",
+    "enabled": true,
+    "thumbnailPath": "https://d2nmfrc2pe2bsk.cloudfront.net/5/381/2513/c3479a2c-362c-4c47-86b2-d47ecfa3da1e.jpg?type=w100",
+    "previewPath": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/5/381/2513/7be1a53a-c979-40b6-b04f-79a00455cad8.mp4/preview/7be1a53a-c979-40b6-b04f-79a00455cad8master.m3u8",
+    "captions": [
+      {
+        "lang": "KO_KR",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/381/2513/1da90b62-9c9d-4bac-84da-c33174409b97.vtt"
+      },
+      {
+        "lang": "EN_US",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/381/2513/5014e19a-d2df-47ce-815f-2e51c3937f82.vtt"
+      },
+      {
+        "lang": "JA_JP",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/381/2513/a595bf3f-882c-43e3-88f4-70eb59ef8f6d.vtt"
+      }
+    ],
+    "categoryId": 0,
+    "useDrm": true,
+    "free": false,
+    "createdAt": "2021-09-08T01:00:00.000Z",
+    "updatedAt": "2022-06-10T10:05:02.628Z",
+    "publishedAt": "2021-09-08T01:00:00.000Z",
+    "priority": 0,
+    "playTime": 343424,
+    "maxResolution": "P1080",
+    "orientation": "HORIZONTAL",
+    "title": "[Update My Profile] WJSN - EP.1",
+    "subTitle": "[Update My Profile] WJSN",
+    "description": " ",
+    "path": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/5/381/2513/7be1a53a-c979-40b6-b04f-79a00455cad8.mp4/preview/7be1a53a-c979-40b6-b04f-79a00455cad8master.m3u8",
+    "lastPlaytime": 0
+  },
+  {
+    "contentsId": 2796,
+    "planetId": 4,
+    "seriesId": 64,
+    "mediaType": "VOD",
+    "contentsType": "ENTERTAINMENT",
+    "enabled": true,
+    "thumbnailPath": "https://d2nmfrc2pe2bsk.cloudfront.net/5/381/2545/2386e23c-f946-451c-a9b0-29851ffaf165.jpg?type=w100",
+    "previewPath": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/5/381/2545/d3665836-bfa6-4cae-8c8f-14a84cb14e93.mp4/preview/d3665836-bfa6-4cae-8c8f-14a84cb14e93master.m3u8",
+    "captions": [
+      {
+        "lang": "KO_KR",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/381/2545/a8e215bf-4aa0-4804-8fad-87e90819fc57.vtt"
+      },
+      {
+        "lang": "EN_US",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/381/2545/7caabd49-4a60-4559-8cdb-aefab8341f6d.vtt"
+      },
+      {
+        "lang": "JA_JP",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/381/2545/5a5fa683-6c3d-4eb1-9842-21024b687204.vtt"
+      }
+    ],
+    "categoryId": 0,
+    "useDrm": true,
+    "free": false,
+    "createdAt": "2021-09-09T01:00:00.000Z",
+    "updatedAt": "2022-06-10T10:05:02.625Z",
+    "publishedAt": "2021-09-09T01:00:00.000Z",
+    "priority": 0,
+    "playTime": 353195,
+    "maxResolution": "P1080",
+    "orientation": "HORIZONTAL",
+    "title": "[Update My Profile] WJSN - EP.2",
+    "subTitle": "[Update My Profile] WJSN",
+    "description": "",
+    "path": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/5/381/2545/d3665836-bfa6-4cae-8c8f-14a84cb14e93.mp4/preview/d3665836-bfa6-4cae-8c8f-14a84cb14e93master.m3u8",
+    "lastPlaytime": 0
+  }
+]
