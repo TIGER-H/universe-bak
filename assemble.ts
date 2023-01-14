@@ -12,7 +12,11 @@ for (const content of contents) {
 
   for (const detail of contentsJSON) {
     const { title, path } = detail;
-    const hash = path.split("/").at(-1).split(".")[0];
+    // find hash from url like this
+    // https://d1ksgh4vgfm8hg.cloudfront.net/converted/2022/12/14/jHcPIBZJLxshZR3U8jG3NA.mp4/preview/jHcPIBZJLxshZR3U8jG3NAmaster.m3u8
+    // after:
+    // jHcPIBZJLxshZR3U8jG3NA
+    const hash = path.split(".mp4")[0].split("/").pop() as string;
 
     const targetDir = Deno.readDirSync(`./link/original/${filename}`);
     for (const file of targetDir) {
