@@ -1,0 +1,80 @@
+[
+  {
+    "contentsId": 4281,
+    "planetId": 4,
+    "seriesId": 69,
+    "mediaType": "VOD",
+    "contentsType": "ENTERTAINMENT",
+    "enabled": true,
+    "thumbnailPath": "https://d2nmfrc2pe2bsk.cloudfront.net/5/556/3737/208f0c8f-e3c9-4713-871c-367dcf3ac386.jpg?type=w100",
+    "previewPath": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/5/556/3737/bfa49e4e-9f15-4768-8a8f-48451c2bdee4.mp4/preview/bfa49e4e-9f15-4768-8a8f-48451c2bdee4master.m3u8",
+    "captions": [
+      {
+        "lang": "KO_KR",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/556/3737/ed183d39-b60b-4f44-81ea-e37b96712221.vtt"
+      },
+      {
+        "lang": "EN_US",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/556/3737/0c00b546-aabf-40fe-a600-8072cd4576ca.vtt"
+      },
+      {
+        "lang": "JA_JP",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/556/3737/e7e97f59-7696-4b7a-b729-828110fd4872.vtt"
+      }
+    ],
+    "categoryId": 142,
+    "useDrm": true,
+    "free": false,
+    "createdAt": "2022-01-20T01:00:00.000Z",
+    "updatedAt": "2022-06-10T10:06:13.041Z",
+    "publishedAt": "2022-01-20T01:00:00.000Z",
+    "priority": 0,
+    "playTime": 356245,
+    "maxResolution": "P1080",
+    "orientation": "HORIZONTAL",
+    "title": "[I Had an Interview] WJSN’s Interview for Party Planners EP.1",
+    "subTitle": "[I Had an Interview] WJSN’s Interview for Party Planners",
+    "description": "WJSN’s members in roleplay interviews for party planners",
+    "path": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/5/556/3737/bfa49e4e-9f15-4768-8a8f-48451c2bdee4.mp4/preview/bfa49e4e-9f15-4768-8a8f-48451c2bdee4master.m3u8",
+    "lastPlaytime": 0
+  },
+  {
+    "contentsId": 4292,
+    "planetId": 4,
+    "seriesId": 69,
+    "mediaType": "VOD",
+    "contentsType": "ENTERTAINMENT",
+    "enabled": true,
+    "thumbnailPath": "https://d2nmfrc2pe2bsk.cloudfront.net/5/556/3738/30cca57e-3c64-4541-b697-8f1d71664fc0.jpg?type=w100",
+    "previewPath": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/5/556/3738/e7afb827-6d1d-43ab-810b-106abde944dd.mp4/preview/e7afb827-6d1d-43ab-810b-106abde944ddmaster.m3u8",
+    "captions": [
+      {
+        "lang": "KO_KR",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/556/3738/3c8c580a-5337-4e60-af56-98f1f0dff13a.vtt"
+      },
+      {
+        "lang": "EN_US",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/556/3738/58e8bf44-1b60-4630-a191-bf00e909d952.vtt"
+      },
+      {
+        "lang": "JA_JP",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/556/3738/7e5b4ac9-cc07-443b-85bc-58fc5952ef25.vtt"
+      }
+    ],
+    "categoryId": 142,
+    "useDrm": true,
+    "free": false,
+    "createdAt": "2022-01-21T01:00:00.000Z",
+    "updatedAt": "2022-06-10T10:06:13.039Z",
+    "publishedAt": "2022-01-21T01:00:00.000Z",
+    "priority": 0,
+    "playTime": 352576,
+    "maxResolution": "P1080",
+    "orientation": "HORIZONTAL",
+    "title": "[I Had an Interview] WJSN’s Interview for Party Planners EP.2",
+    "subTitle": "[I Had an Interview] WJSN’s Interview for Party Planners",
+    "description": "WJSN’s members in roleplay interviews for party planners",
+    "path": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/5/556/3738/e7afb827-6d1d-43ab-810b-106abde944dd.mp4/preview/e7afb827-6d1d-43ab-810b-106abde944ddmaster.m3u8",
+    "lastPlaytime": 0
+  }
+]

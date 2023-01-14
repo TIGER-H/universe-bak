@@ -1,0 +1,72 @@
+[
+  {
+    "contentsId": 17,
+    "planetId": 4,
+    "seriesId": 55,
+    "mediaType": "VOD",
+    "contentsType": "ENTERTAINMENT",
+    "enabled": true,
+    "thumbnailPath": "https://d2nmfrc2pe2bsk.cloudfront.net/5/6/15/e33c26a3-d45b-4613-9d16-91fac79a3719.jpg?type=w100",
+    "previewPath": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/5/6/15/775b4525-c994-45c2-b0eb-340ccc8e7bdb.mp4/preview/775b4525-c994-45c2-b0eb-340ccc8e7bdbmaster.m3u8",
+    "captions": [
+      {
+        "lang": "EN_US",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/6/15/2fc18967-4f4f-4ffb-89cb-d5b2e4435468.vtt"
+      },
+      {
+        "lang": "JA_JP",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/6/15/a744c983-4f03-4173-9f67-dec661e65ea6.vtt"
+      }
+    ],
+    "categoryId": 0,
+    "useDrm": false,
+    "free": true,
+    "createdAt": "2021-01-25T10:00:00.000Z",
+    "updatedAt": "2022-06-08T16:12:06.189Z",
+    "publishedAt": "2021-01-25T10:00:00.000Z",
+    "priority": 0,
+    "playTime": 109526,
+    "maxResolution": "P1080",
+    "orientation": "HORIZONTAL",
+    "title": "[Commercial MAKING FILM] WJSN Ep.1",
+    "subTitle": "[Commercial MAKING FILM] WJSN",
+    "description": " ",
+    "path": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/5/6/15/775b4525-c994-45c2-b0eb-340ccc8e7bdb.mp4/normal/775b4525-c994-45c2-b0eb-340ccc8e7bdbmaster.m3u8",
+    "lastPlaytime": 0
+  },
+  {
+    "contentsId": 18,
+    "planetId": 4,
+    "seriesId": 55,
+    "mediaType": "VOD",
+    "contentsType": "ENTERTAINMENT",
+    "enabled": true,
+    "thumbnailPath": "https://d2nmfrc2pe2bsk.cloudfront.net/5/6/17/e83ee928-2590-4e7f-a9eb-d9dc8f13f1fd.jpg?type=w100",
+    "previewPath": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/5/6/17/edaf0af0-46b5-4af4-8b9d-e1f00626476b.mp4/preview/edaf0af0-46b5-4af4-8b9d-e1f00626476bmaster.m3u8",
+    "captions": [
+      {
+        "lang": "EN_US",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/6/17/2b85a4f0-f5f4-41ee-93c2-0608048df5bf.vtt"
+      },
+      {
+        "lang": "JA_JP",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/6/17/63373104-806c-44fb-8dbb-56cce3332b54.vtt"
+      }
+    ],
+    "categoryId": 0,
+    "useDrm": false,
+    "free": true,
+    "createdAt": "2021-01-25T10:00:00.000Z",
+    "updatedAt": "2022-06-08T16:12:06.357Z",
+    "publishedAt": "2021-01-25T10:00:00.000Z",
+    "priority": 0,
+    "playTime": 128595,
+    "maxResolution": "P1080",
+    "orientation": "HORIZONTAL",
+    "title": "[Commercial MAKING FILM] WJSN Ep.2",
+    "subTitle": "[Commercial MAKING FILM] WJSN",
+    "description": " ",
+    "path": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/5/6/17/edaf0af0-46b5-4af4-8b9d-e1f00626476b.mp4/normal/edaf0af0-46b5-4af4-8b9d-e1f00626476bmaster.m3u8",
+    "lastPlaytime": 0
+  }
+]

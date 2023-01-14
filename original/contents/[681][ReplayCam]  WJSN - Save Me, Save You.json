@@ -1,0 +1,40 @@
+[
+  {
+    "contentsId": 7271,
+    "planetId": 4,
+    "seriesId": 681,
+    "mediaType": "VOD",
+    "contentsType": "ENTERTAINMENT",
+    "enabled": true,
+    "thumbnailPath": "https://d2nmfrc2pe2bsk.cloudfront.net/2022/09/14/t_6QpI0KeAUawWfe6q914CXe.png?type=w100",
+    "previewPath": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/2022/09/14/NEZ0I1KlF1LgAVHeTPNZxE.mp4/preview/NEZ0I1KlF1LgAVHeTPNZxEmaster.m3u8",
+    "captions": [
+      {
+        "lang": "KO_KR",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/2022/09/14/udIU8TefFURkmIaRUmZDkL.vtt"
+      },
+      {
+        "lang": "EN_US",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/2022/09/14/DxAQOv3dExIlw1jhyQGO0C.vtt"
+      },
+      {
+        "lang": "JA_JP",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/2022/09/14/jCJ7x29oCBfdLyZy6bGQlE.vtt"
+      }
+    ],
+    "useDrm": true,
+    "free": false,
+    "createdAt": "2022-09-14T10:51:43.607Z",
+    "updatedAt": "2022-09-26T06:47:34.075Z",
+    "publishedAt": "2022-09-27T10:00:00.919Z",
+    "priority": 0,
+    "playTime": 278315,
+    "maxResolution": "P2160",
+    "orientation": "HORIZONTAL",
+    "title": "[ReplayCam]  WJSN - Save Me, Save You",
+    "subTitle": "[ReplayCam]  WJSN - Save Me, Save You",
+    "description": "WJSN’s members 'Save Me, Save You' replay",
+    "path": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/2022/09/14/NEZ0I1KlF1LgAVHeTPNZxE.mp4/preview/NEZ0I1KlF1LgAVHeTPNZxEmaster.m3u8",
+    "lastPlaytime": 0
+  }
+]

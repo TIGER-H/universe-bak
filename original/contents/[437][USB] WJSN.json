@@ -1,0 +1,38 @@
+[
+  {
+    "contentsId": 5594,
+    "planetId": 4,
+    "seriesId": 437,
+    "mediaType": "VOD",
+    "contentsType": "ENTERTAINMENT",
+    "enabled": true,
+    "thumbnailPath": "https://d2nmfrc2pe2bsk.cloudfront.net/5/760/4625/c610e2d1-c8ca-4251-9459-b2c3c45a7827.png?type=w100",
+    "previewPath": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/5/760/4625/4219d341-6d67-4a32-af4e-fdeb29d32602.mp4/preview/4219d341-6d67-4a32-af4e-fdeb29d32602master.m3u8",
+    "captions": [
+      {
+        "lang": "KO_KR",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/760/4625/5fb385ba-22b9-434c-86e3-f86946b69d93.vtt"
+      },
+      {
+        "lang": "EN_US",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/5/760/4625/e7ca528e-fccf-4731-97f8-d29f6521055b.vtt"
+      }
+    ],
+    "categoryId": 0,
+    "useDrm": true,
+    "free": true,
+    "createdAt": "2022-05-11T09:00:00.000Z",
+    "updatedAt": "2022-08-05T05:48:16.597Z",
+    "publishedAt": "2022-05-11T09:00:00.757Z",
+    "priority": 0,
+    "playTime": 272683,
+    "maxResolution": "P1080",
+    "orientation": "HORIZONTAL",
+    "title": "[USB] WJSN",
+    "subTitle": "[USB] WJSN",
+    "description": "Universe Special B-cut",
+    "path": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/5/760/4625/4219d341-6d67-4a32-af4e-fdeb29d32602.mp4/drm/4219d341-6d67-4a32-af4e-fdeb29d32602master.mpd",
+    "token": "eyJhY2Nlc3Nfa2V5IjoiTmI3NUR5VHpwbFZEM2x6R3U3VXRoRkJlTmNnQ0hISkgiLCJkcm1fdHlwZSI6IlBsYXlSZWFkeSIsInNpdGVfaWQiOiJVSU9CIiwidXNlcl9pZCI6IlVOSVZFUlNFIiwidGltZXN0YW1wIjoiMjAyMy0wMS0xNFQwOToyOTowNC45OThaIiwiaGFzaCI6IlJDYkVYa2tKMlFrWjZYREhtUkJzL1FydmZ6Vkd6OEVMcThlSGxFLzZFV1U9IiwicG9saWN5IjoiMnNKZmszeFZPN0ltbVlGdVhUQ3psOU82M09ONlhua1VqQit4WCt3cEh2anJvMnFZb1JDcjhqNzhsSGcrWmgxVTVKR3pMZkVpY1dlcEVSU2ZlZ2kweDdwdHRRSVF6aHpyR1RmeDk5a1pXekZ4ZEU0Uy9adUtKalh2d1NxY1B4R1oiLCJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJqc29uIiwiY2lkIjoidW5pdmVyc2Utb3JpZ2luYWwifQ==",
+    "lastPlaytime": 0
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "contentsId": 5115,
+    "planetId": 4,
+    "seriesId": 70,
+    "mediaType": "VOD",
+    "contentsType": "ENTERTAINMENT",
+    "enabled": true,
+    "thumbnailPath": "https://d2nmfrc2pe2bsk.cloudfront.net/5/684/4263/0f7c7e95-7d99-4f39-9ea2-993c480420e3.jpg?type=w100",
+    "previewPath": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/5/684/4263/af71c774-48a2-4c5c-bd2b-ade987ea9c12.mp4/preview/af71c774-48a2-4c5c-bd2b-ade987ea9c12master.m3u8",
+    "captions": [
+      {
+        "lang": "EN_US",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/2022/07/11/ZOeuarf44EPJWRAVg4LMJN.vtt"
+      },
+      {
+        "lang": "JA_JP",
+        "path": "https://d1ksgh4vgfm8hg.cloudfront.net/2022/07/11/cwGLsFjDAheZnfrALfBlzQ.vtt"
+      }
+    ],
+    "categoryId": 0,
+    "useDrm": true,
+    "free": false,
+    "createdAt": "2022-03-30T09:00:00.000Z",
+    "updatedAt": "2022-07-11T04:49:44.306Z",
+    "publishedAt": "2022-03-30T09:00:00.000Z",
+    "priority": 0,
+    "playTime": 313365,
+    "maxResolution": "P1080",
+    "orientation": "HORIZONTAL",
+    "title": "[Guide to becoming a fan] WJSN - BONA",
+    "subTitle": "[Guide to becoming a fan] WJSN - BONA",
+    "description": "#TwentyFiveTwentyOne",
+    "path": "https://d1ksgh4vgfm8hg.cloudfront.net/converted/5/684/4263/af71c774-48a2-4c5c-bd2b-ade987ea9c12.mp4/preview/af71c774-48a2-4c5c-bd2b-ade987ea9c12master.m3u8",
+    "lastPlaytime": 0
+  }
+]
