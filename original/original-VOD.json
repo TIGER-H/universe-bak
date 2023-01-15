@@ -1,5 +1,21 @@
 [
   {
+    "seriesId": 63,
+    "planetId": 4,
+    "mediaType": "VOD",
+    "enabled": true,
+    "categoryEnabled": true,
+    "thumbnailPath": "https://d2nmfrc2pe2bsk.cloudfront.net/2022/12/12/t_AwelwNpFLCHN9RHZFxJmXG.png?type=w100",
+    "count": 15,
+    "createdAt": "2022-05-24T15:09:52.220Z",
+    "updatedAt": "2023-01-15T10:00:57.715Z",
+    "publishedAt": "2021-09-04T01:00:00.001Z",
+    "title": "WJSN | Photo Behind",
+    "description": "Concept Photo Behind the Scenes",
+    "categories": [],
+    "isNew": true
+  },
+  {
     "seriesId": 726,
     "planetId": 4,
     "mediaType": "VOD",
@@ -12,22 +28,6 @@
     "publishedAt": "2022-12-23T10:00:00.921Z",
     "title": "[MOSEORI : All about Universe] WJSN",
     "description": "-",
-    "categories": [],
-    "isNew": false
-  },
-  {
-    "seriesId": 63,
-    "planetId": 4,
-    "mediaType": "VOD",
-    "enabled": true,
-    "categoryEnabled": true,
-    "thumbnailPath": "https://d2nmfrc2pe2bsk.cloudfront.net/2022/12/12/t_AwelwNpFLCHN9RHZFxJmXG.png?type=w100",
-    "count": 14,
-    "createdAt": "2022-05-24T15:09:52.220Z",
-    "updatedAt": "2023-01-05T02:14:22.789Z",
-    "publishedAt": "2021-09-04T01:00:00.001Z",
-    "title": "WJSN | Photo Behind",
-    "description": "Concept Photo Behind the Scenes",
     "categories": [],
     "isNew": false
   },
