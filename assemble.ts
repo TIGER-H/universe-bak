@@ -14,11 +14,27 @@ for (const content of contents) {
     const [hash, name] = Object.entries(mapping)[0];
     try {
       Deno.renameSync(
-        `./link/original/${filename}/${hash} [${hash}].mp4`,
+        `./link/original/${filename}/${hash}.mp4`,
         `./link/original/${filename}/${name}`,
       );
-    } catch (e) {
-      console.error(e);
+    } catch (_e) {
+      // ignore
+    }
+    try {
+      Deno.renameSync(
+        `./link/original/${filename}/${hash}.jpg`,
+        `./link/original/${filename}/${name}`,
+      );
+    } catch (_e) {
+      // ignore
+    }
+    try {
+      Deno.renameSync(
+        `./link/original/${filename}/${hash}.png`,
+        `./link/original/${filename}/${name}`,
+      );
+    } catch (_e) {
+      // ignore
     }
   }
 

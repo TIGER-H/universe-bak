@@ -35,47 +35,21 @@ jobs:
           token: ${{ secrets.PAT }}
 
       - run: |
-          deno run -A ./link.ts 0 5
-          cd ./link/original
-          for file in *;
+          for i in `seq 0 29`;
           do
-            cd "./${file}";
-            yt-dlp --downloader aria2c -a "./${file}.txt";
-            cd ..;
-          done;
-          cd ../..
-          deno run -A ./assemble.ts
-          cd ./link/
-          rclone copy original/ goo:/wjsn/
-          cd ..
-          rm -r ./link
-
-          deno run -A ./link.ts 5 10
-          cd ./link/original
-          for file in *;
-          do
-            cd "./${file}"
-            yt-dlp --downloader aria2c -a "./${file}.txt"
+            echo $i
+            deno run -A link.ts $i
+            cd ./link/original
+            for file in *;
+              do
+                cd "./${file}"
+                aria2c -j 16 -i "./${file}.txt"
+                cd ..;
+            done
+            cd ../..
+            deno run -A ./assemble.ts
+            cd ./link/
+            rclone copy original/ goo:/wjsn/
             cd ..
-          ;
-          done;
-          cd ../..
-          deno run -A ./assemble.ts
-          cd ./link/
-          rclone copy original/ goo:/wjsn/
-          cd ..
-          rm -r ./link
-
-          deno run -A ./link.ts 10 15 
-          cd ./link/original
-          for file in *;
-          do
-            cd "./${file}"
-            yt-dlp --downloader aria2c -a "./${file}.txt"
-            cd ..
-          ;
-          done;
-          cd ../..
-          deno run -A ./assemble.ts
-          cd ./link/
-          rclone copy original/ goo:/wjsn/
+            rm -r ./link
+          done
