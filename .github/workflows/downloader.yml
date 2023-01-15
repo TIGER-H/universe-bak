@@ -13,6 +13,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3.3.0
 
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1.1.1
+        with:
+          deno-version: v1.x
+
       - name: Setup Rclone
         uses: AnimMouse/setup-rclone@v1
         with:
@@ -29,16 +34,14 @@ jobs:
           # GitHub token to avoid API rate limiting
           token: ${{ secrets.PAT }}
 
-      - name: download contents and copy to drive-1
       - run: |
           deno run -A ./link.ts 0 10
           cd ./link/original
           for file in *;
           do
-            cd ./${file}
-            yt-dlp --downloader aria2c -a "./${file}.txt"
-            cd ..
-          ;
+            cd "./${file}";
+            yt-dlp --downloader aria2c -a "./${file}.txt";
+            cd ..;
           done;
           cd ../..
           deno run -A ./assemble.ts
@@ -47,13 +50,11 @@ jobs:
           cd ..
           rm -r ./link
 
-      - name: download contents and copy to drive-2
-      - run: |
           deno run -A ./link.ts 10 20
           cd ./link/original
           for file in *;
           do
-            cd ./${file}
+            cd "./${file}"
             yt-dlp --downloader aria2c -a "./${file}.txt"
             cd ..
           ;
@@ -65,13 +66,11 @@ jobs:
           cd ..
           rm -r ./link
 
-        - name: download contents and copy to drive-3
-        - run: |
           deno run -A ./link.ts 20 30
           cd ./link/original
           for file in *;
           do
-            cd ./${file}
+            cd "./${file}"
             yt-dlp --downloader aria2c -a "./${file}.txt"
             cd ..
           ;
@@ -80,5 +79,3 @@ jobs:
           deno run -A ./assemble.ts
           cd ./link/
           rclone copy original/ goo:/wjsn/
-          cd ..
-          rm -r ./link
