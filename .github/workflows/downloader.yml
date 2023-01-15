@@ -42,7 +42,6 @@ jobs:
             cd ./${file}
             yt-dlp --downloader aria2c -a "./${file}.txt"
             cd ..
-          ;
           done;
           cd ../..
           deno run -A ./assemble.ts
