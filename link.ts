@@ -42,7 +42,6 @@ const generateLink = () => {
       mapping.push({
         [videoHash]: `${title}.mp4`,
       });
-      console.log(thumbnailHash);
 
       mapping.push({
         [thumbnailHash]: `${title}.jpg`,
