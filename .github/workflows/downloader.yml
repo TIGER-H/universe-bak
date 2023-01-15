@@ -29,5 +29,20 @@ jobs:
           # GitHub token to avoid API rate limiting
           token: ${{ secrets.PAT }}
           
-      - run: yt-dlp
-  
+      - name: download contents and copy to drive
+      - run: |
+          deno run -A ./link.ts
+          cd ./link/original
+          for file in *;
+          do
+            cd ./${file}
+            yt-dlp --downloader aria2c -a "./${file}.txt"
+            cd ..
+          ;
+          done;
+          cd ../..
+          deno run -A ./assemble.ts
+          cd ./link/
+          rclone copy original/ goo:/wjsn/
+      
+        
