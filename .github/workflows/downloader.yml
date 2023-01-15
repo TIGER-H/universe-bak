@@ -49,7 +49,7 @@ jobs:
             cd ../..
             deno run -A ./assemble.ts
             cd ./link/
-            rclone copy original/ goo:/wjsn/
+            rclone copy original/ 316:/wjsn/ -P
             cd ..
             rm -r ./link
           done
