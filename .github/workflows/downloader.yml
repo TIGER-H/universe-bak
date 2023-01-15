@@ -1,0 +1,33 @@
+name: downloader
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    environment: universe
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.3.0
+        
+      - name: Setup Rclone
+        uses: AnimMouse/setup-rclone@v1
+        with:
+          rclone_config: ${{ secrets.RCLONE }}
+          token: ${{ secrets.PAT }}
+
+      - name: Setup yt-dlp
+        uses: AnimMouse/setup-yt-dlp@v1
+        with:
+          # Install FFmpeg for yt-dlp
+          with-ffmpeg: true
+          # yt-dlp version
+          #version: # optional, default is latest
+          # GitHub token to avoid API rate limiting
+          token: ${{ secrets.PAT }}
+          
+      - run: yt-dlp
+  
