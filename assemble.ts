@@ -6,28 +6,21 @@ const contents = Deno.readDirSync("./link/original/");
 for (const content of contents) {
   const filename = content.name;
 
-  const contentsJSON = JSON.parse(
-    Deno.readTextFileSync(`./original/contents/${filename}.json`),
+  const mappings = JSON.parse(
+    Deno.readTextFileSync(`./link/original/${filename}/${filename}.json`)
   );
 
-  for (const detail of contentsJSON) {
-    const { title, path } = detail;
-    // find hash from url like this
-    // https://d1ksgh4vgfm8hg.cloudfront.net/converted/2022/12/14/jHcPIBZJLxshZR3U8jG3NA.mp4/preview/jHcPIBZJLxshZR3U8jG3NAmaster.m3u8
-    // after:
-    // jHcPIBZJLxshZR3U8jG3NA
-    const hash = path.split(".mp4")[0].split("/").pop() as string;
-
-    const targetDir = Deno.readDirSync(`./link/original/${filename}`);
-    for (const file of targetDir) {
-      if (file.name.startsWith(hash)) {
-        // rename
-        const [_oldname, ...ext] = file.name.split(".");
-        Deno.renameSync(
-          `./link/original/${filename}/${file.name}`,
-          `./link/original/${filename}/${title}.${ext.join(".")}`,
-        );
-      }
+  for (const mapping of mappings) {
+    const [hash, name] = Object.entries(mapping)[0];
+    try {
+      Deno.renameSync(
+        `./link/original/${filename}/${hash} [${hash}].mp4`,
+        `./link/original/${filename}/${name}`,
+      );
+    } catch (e) {
+      console.error(e);
     }
   }
+
 }
+
