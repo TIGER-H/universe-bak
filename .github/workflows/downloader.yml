@@ -13,6 +13,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3.3.0
         
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1.1.1
+        with:
+          deno-version: v1.x
+        
       - name: Setup Rclone
         uses: AnimMouse/setup-rclone@v1
         with:
@@ -43,5 +48,3 @@ jobs:
           deno run -A ./assemble.ts
           cd ./link/
           rclone copy original/ goo:/wjsn/
-      
-        
