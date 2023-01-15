@@ -29,7 +29,6 @@ jobs:
           # GitHub token to avoid API rate limiting
           token: ${{ secrets.PAT }}
           
-      - name: download contents and copy to drive
       - run: |
           deno run -A ./link.ts
           cd ./link/original
