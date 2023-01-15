@@ -12,13 +12,24 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3.3.0
-
-      - name: Github Action for rclone
-        uses: wei/rclone@v1.1.1 
-        env:
-          RCLONE_CONF: ${{ secrets.RCLONE }}
+        
+      - name: Setup Rclone
+        uses: AnimMouse/setup-rclone@v1
         with:
-          args: copy <source>:<source_path> <dest>:<dest_path>  
+          rclone_config: ${{ secrets.RCLONE }}
+          token: ${{ secrets.PAT }}
 
-      - name: test rclone
-        run: rclone copy ./README.md 316:/
+      - name: Setup yt-dlp
+        # You may pin to the exact commit or the version.
+        # uses: AnimMouse/setup-yt-dlp@adab6a56b5a75bb14ff74ad810a2d37678228b22
+        uses: AnimMouse/setup-yt-dlp@v1
+        with:
+          # Install FFmpeg for yt-dlp
+          with-ffmpeg: true
+          # yt-dlp version
+          #version: # optional, default is latest
+          # GitHub token to avoid API rate limiting
+          token: ${{ secrets.PAT }}
+          
+      - run: yt-dlp
+  
