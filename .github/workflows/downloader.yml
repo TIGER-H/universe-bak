@@ -24,16 +24,6 @@ jobs:
           rclone_config: ${{ secrets.RCLONE }}
           token: ${{ secrets.PAT }}
 
-      - name: Setup yt-dlp
-        uses: AnimMouse/setup-yt-dlp@v1
-        with:
-          # Install FFmpeg for yt-dlp
-          with-ffmpeg: true
-          # yt-dlp version
-          #version: # optional, default is latest
-          # GitHub token to avoid API rate limiting
-          token: ${{ secrets.PAT }}
-
       - run: |
           for i in `seq 0 29`;
           do
