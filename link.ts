@@ -1,9 +1,21 @@
+const [start, end] = Deno.args;
 /**
  * generate link for 3rd party downloader to download
  */
-const generateLink = () => {
+const generateLink = (start = 0, end = 10) => {
   const dir = Deno.readDirSync("./original/contents");
+
+  let cnt = 0;
   for (const file of dir) {
+    cnt++;
+    // only file in [start, end] will be processed
+    if (cnt < start) {
+      continue;
+    }
+    if (cnt > end) {
+      break;
+    }
+
     const name = file.name.replace(".json", "");
     const contents = JSON.parse(
       Deno.readTextFileSync("./original/contents/" + file.name),
@@ -77,4 +89,4 @@ const generateLink = () => {
   }
 };
 
-generateLink();
+generateLink(parseInt(start), parseInt(end));
