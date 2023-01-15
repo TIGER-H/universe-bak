@@ -19,4 +19,17 @@ jobs:
           rclone_config: ${{ secrets.RCLONE }}
           token: ${{ secrets.PAT }}
 
-      - run: rclone copy ./README.md 316:/
+      - name: Setup yt-dlp
+        # You may pin to the exact commit or the version.
+        # uses: AnimMouse/setup-yt-dlp@adab6a56b5a75bb14ff74ad810a2d37678228b22
+        uses: AnimMouse/setup-yt-dlp@v1
+        with:
+          # Install FFmpeg for yt-dlp
+          with-ffmpeg: true
+          # yt-dlp version
+          #version: # optional, default is latest
+          # GitHub token to avoid API rate limiting
+          token: ${{ secrets.PAT }}
+          
+      - run: yt-dlp
+  
