@@ -39,9 +39,10 @@ jobs:
           cd ./link/original
           for file in *;
           do
-            cd ./${file};
-            yt-dlp --downloader aria2c -a "./${file}.txt";
-            cd ..;
+            cd "./${file}"
+            yt-dlp --downloader aria2c -a "./${file}.txt"
+            cd ..
+          ;
           done;
           cd ../..
           deno run -A ./assemble.ts
