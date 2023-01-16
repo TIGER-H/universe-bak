@@ -1,9 +1,21 @@
+const [idx] = Deno.args;
 /**
  * generate link for 3rd party downloader to download
  */
-const generateLink = () => {
+const generateLink = (idx: number) => {
   const dir = Deno.readDirSync("./original/contents");
+
+  let cnt = 0;
   for (const file of dir) {
+    // only file in [start, end] will be processed
+    if (cnt !== idx) {
+      cnt++;
+      continue;
+    }
+    if (cnt > idx) {
+      break;
+    }
+
     const name = file.name.replace(".json", "");
     const contents = JSON.parse(
       Deno.readTextFileSync("./original/contents/" + file.name),
@@ -25,12 +37,17 @@ const generateLink = () => {
         /\/preview\/.*/,
         "",
       );
-      const captionLinks = captions.map((caption) => caption.path);
+      const captionLinks = captions
+        ? captions.map((caption) => caption.path)
+        : [];
       const thumbnailLink = thumbnailPath.replace("w100", "w300");
 
       // map hash to title
       const videoHash = convertedLink.replace(/(.*)\/(.*).mp4/, "$2");
-      const thumbnailHash = thumbnailLink.replace(/(.*)\/(.*).(jpg|png)(.*)/, "$2");
+      const thumbnailHash = thumbnailLink.replace(
+        /(.*)\/(.*).(jpg|png)(.*)/,
+        "$2",
+      );
 
       const mapping = captions.map((caption) => {
         const { lang, path } = caption;
@@ -47,7 +64,11 @@ const generateLink = () => {
         [thumbnailHash]: `${title}.jpg`,
       });
 
-      return [convertedLink + `\n${captionLinks.join("\n")}`, mapping];
+      return [
+        convertedLink +
+        `\n${[...captionLinks, thumbnailLink].join("\n")}`,
+        mapping,
+      ];
     });
 
     // https://deno.land/std@0.172.0/fs/mod.ts?s=exists
@@ -74,7 +95,9 @@ const generateLink = () => {
       `./link/original/${name}/` + name + ".json",
       new TextEncoder().encode(JSON.stringify(mappingLinks, null, 2)),
     );
+
+    cnt++;
   }
 };
 
-generateLink();
+generateLink(parseInt(idx));

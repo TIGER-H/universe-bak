@@ -1,4 +1,4 @@
-name: downloader-1
+name: downloader-2
 
 on:
   workflow_dispatch:
@@ -25,7 +25,7 @@ jobs:
           token: ${{ secrets.PAT }}
 
       - run: |
-          for i in `seq 0 10`;
+          for i in `seq 10 20`;
           do
             echo $i
             deno run -A link.ts $i
