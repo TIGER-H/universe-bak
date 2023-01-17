@@ -32,7 +32,7 @@ jobs:
           token: ${{ secrets.PAT }}
 
       - run: |
-          for i in `seq 11 11`;
+          for i in `seq 10 10`;
           do
             echo $i
             deno run -A link.ts $i
