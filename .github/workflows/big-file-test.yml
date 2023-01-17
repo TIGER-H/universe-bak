@@ -1,4 +1,4 @@
-name: downloader-2
+name: bigfile test
 
 on:
   workflow_dispatch:
@@ -10,8 +10,15 @@ jobs:
     environment: universe
 
     steps:
+      - name: Maximize build disk space
+        uses: easimon/maximize-build-space@v6
+
       - name: Checkout repository
         uses: actions/checkout@v3.3.0
+        with: 
+          remove-dotnet: 'true'
+          remove-android: 'true'
+          remove-haskell: 'true' 
 
       - name: Setup Deno
         uses: denoland/setup-deno@v1.1.1
@@ -25,7 +32,7 @@ jobs:
           token: ${{ secrets.PAT }}
 
       - run: |
-          for i in `seq 12 20`;
+          for i in `seq 11 11`;
           do
             echo $i
             deno run -A link.ts $i
