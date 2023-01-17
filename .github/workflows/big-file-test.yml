@@ -1,0 +1,52 @@
+name: bigfile test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    environment: universe
+
+    steps:
+      - name: Maximize build disk space
+        uses: easimon/maximize-build-space@v6
+
+      - name: Checkout repository
+        uses: actions/checkout@v3.3.0
+        with: 
+          remove-dotnet: 'true'
+          remove-android: 'true'
+          remove-haskell: 'true' 
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1.1.1
+        with:
+          deno-version: v1.x
+
+      - name: Setup Rclone
+        uses: AnimMouse/setup-rclone@v1
+        with:
+          rclone_config: ${{ secrets.RCLONE }}
+          token: ${{ secrets.PAT }}
+
+      - run: |
+          for i in `seq 11 11`;
+          do
+            echo $i
+            deno run -A link.ts $i
+            cd ./link/original
+            for file in *;
+              do
+                cd "./${file}"
+                aria2c -j 16 -i "./${file}.txt"
+                cd ..;
+            done
+            cd ../..
+            deno run -A ./assemble.ts
+            cd ./link/
+            rclone copy original/ 316:/wjsn/original/ -P
+            cd ..
+            rm -r ./link
+          done
