@@ -4,9 +4,7 @@ WJSN universe backup
 
 ## original
 
-- [ ] video series
-
-> drm videos not rdy
+- [x] video series
 
 - [x] audio series
 
