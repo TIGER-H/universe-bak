@@ -1,5 +1,7 @@
 # universe-bak
 
+[![Daily meta backup script](https://github.com/TIGER-H/universe-bak/actions/workflows/daily-meta.yml/badge.svg?branch=main)](https://github.com/TIGER-H/universe-bak/actions/workflows/daily-meta.yml)
+
 WJSN universe backup
 
 ## original
