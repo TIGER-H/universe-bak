@@ -10,6 +10,12 @@ WJSN universe backup
 
 - [x] audio series
 
+| Name | Count |
+| ---- | ----- |
+|ALL|29|
+|AUDIO|4|
+|VOD|25|
+
 ## UNIVERSE photo
 
 > hi res photo not recorded yet (need money)
@@ -18,6 +24,13 @@ WJSN universe backup
 
 - [x] behind
 
+| Name | Count |
+| ---- | ----- |
+|ALL|216|
+|BEHIND|63|
+|ORIGINAL|154|
+
 ## fns
 
 - [x] by member
+
