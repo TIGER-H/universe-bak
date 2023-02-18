@@ -24,7 +24,7 @@ jobs:
           deno-version: v1.x
 
       - name: Run script
-        run: deno run -A ./mod.ts
+        run: deno run -A ./mod.ts fns
         env:
           TOKEN: ${{ secrets.TOKEN }}
 
