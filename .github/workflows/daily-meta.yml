@@ -37,7 +37,7 @@ jobs:
           author: tg <tg@wjsn.org>
           signoff: false
           branch: backup-meta-patches
-          delete-branch: false
+          delete-branch: true
           title: "[Backup] Metadata Update"
           body: |
             meta backup by Github actions.
